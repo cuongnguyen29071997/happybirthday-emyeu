@@ -34,7 +34,14 @@ html, body {
   font-size: 26px;
   text-align: center;
 }
-
+.center-text2 {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 26px;
+  text-align: center;
+}
 /* ===== ENVELOPE ===== */
 .envelope {
   position: fixed;
@@ -146,9 +153,8 @@ for(let i=0;i<60;i++){
 </div>
 
 <!-- ENVELOPE --> 
-	<div>
-    Nhấn vào đây và mở Loa to lên<br><br>
-		<div class="envelope" onclick="openLetter(this)"></div>
+	 <div class="center-text2"> Nhấn vào đây và mở Loa to lên<br><br>
+	<div class="envelope" onclick="openLetter(this)"></div>
  </div>
 
 
