@@ -88,6 +88,25 @@ html, body {
   white-space: pre-line;
 }
 
+/* ===== BUTTON ===== */
+#viewBtn {
+  display: none;
+  margin: 30px auto;
+  padding: 12px 25px;
+  font-size: 18px;
+  background: #0ce15e;
+  border: none;
+  border-radius: 10px;
+  color: black;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#viewBtn:hover {
+  transform: scale(1.1);
+  background: #08a94a;
+}
+
 /* ===== STAR BACKGROUND ===== */
 .star {
   position: fixed;
@@ -132,53 +151,19 @@ for(let i=0;i<60;i++){
 <!-- LETTER -->
 <div class="letter" id="letter">
   <div class="typing" id="typing"></div>
+
+  <div style="text-align:center;">
+    <button id="viewBtn">Xem ảnh 💖</button>
+  </div>
 </div>
 
-<!-- AUDIO -->
+<!-- AUDIO Cần đổi lại link nhạc, tải file về rồi đẩy lên google drive--> 
 <audio id="music" loop>
-  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">
+  <source src="https://www2.cs.uic.edu/~i101/SoundFiles/HappyBirthday.mid">
 </audio>
 
 <script>
-const text = `
-		Chúc mừng sinh nhật em yêu ❤️
-		
-		Sinh nhật vui vẻ nhé, tình yêu của anh 💖
-		
-		Quen nhau cũng gần 5 năm, đón cùng nhau 5 cái sinh nhật với nhau, có nhiều kỷ niệm đẹp và rất đẹp, đủ để anh viết lên 1 câu chuyện dài. Cùng anh đọc qua câu chuyện này nha em.
-
-		Cũng gần 5 năm qua giống như một cuốn phim dài mà chúng ta cùng nhau viết nên, có đủ những ngày nắng đẹp và cả những cơn mưa không báo trước. 
-		
-		Từ những lần ghen tuông vu vơ, những lúc hờn dỗi chẳng ai chịu nhường ai, đến những cuộc cãi vã, tranh luận tưởng chừng như chẳng thể dung hòa… tất cả đã từng khiến chúng ta mệt mỏi. 
-		
-		Nhưng cũng chính những điều đó lại dạy cho chúng ta cách hiểu nhau hơn, biết lắng nghe, biết trân trọng và giữ nhau ở lại.
-
-		Để rồi hôm nay, sau tất cả, chúng ta vẫn ở đây — không phải vì mọi thứ hoàn hảo, mà vì chúng ta đã chọn nhau, chọn yêu thương, chọn bao dung. Bên cạnh nhau không chỉ là tình yêu, mà còn là sự an toàn, sự vui vẻ và cả tự do để mỗi người được là chính mình.
-
-		Hôm nay là một ngày thật đặc biệt, vì đó là ngày mà thế giới này có em – người đã mang đến cho anh quá nhiều yêu thương, niềm vui và ý nghĩa trong cuộc sống. 
-		
-		Anh không biết dùng bao nhiêu lời mới có thể nói hết được em quan trọng với anh đến nhường nào… chỉ biết rằng mỗi ngày có em bên cạnh, với anh đều là một món quà.
-
-		Anh chúc em không chỉ hôm nay mà tất cả những ngày sau này luôn tràn ngập hạnh phúc, luôn mỉm cười thật nhiều và luôn cảm thấy bình yên. Nếu có thể ước một điều, anh chỉ ước mình sẽ là người nắm tay em đi qua thật nhiều cái “sinh nhật” nữa trong cuộc đời này.
-
-		Cảm ơn em vì đã đến, đã ở lại và đã yêu anh theo cách dịu dàng nhất. Anh yêu em rất nhiều, hơn tất cả những gì anh có thể nói thành lời.
-		
-		Anh dành những lời chúc này cách đây vài tháng trước khi câu chuyện của anh và em và mong em sẽ đọc và hiểu cảm nhận lời chúc từ anh.
-
-		Có lẽ câu chuyện của chúng ta không phải lúc nào cũng rực rỡ hay đầy những điều mới mẻ. Có những lúc mọi thứ trở nên quen thuộc đến mức hơi nhàm chán, có những lúc tưởng như tình yêu đã vơi đi một chút. 
-		
-		Nhưng điều làm anh trân trọng nhất, không phải là những lúc hoàn hảo, mà là việc chúng ta vẫn chọn ở lại bên nhau.
-
-		Vì em, anh học cách thay đổi. Vì em, anh muốn trở nên tốt hơn mỗi ngày. Và anh tin rằng, em cũng như vậy – chúng ta cùng nhau tiến bộ, cùng nhau trưởng thành. Không cần phải là phiên bản hoàn hảo, chỉ cần là phiên bản tốt hơn của chính mình, vì nhau.
-
-		Cảm ơn em vì đã ở lại, vì đã cùng anh đi qua những lúc bình thường nhất mà vẫn không buông tay. Ở bên em, anh luôn có một cảm giác rất đặc biệt – đó là sự an toàn, là bình yên, là “nhà”.
-
-		Chúc em tuổi mới luôn hạnh phúc, luôn mỉm cười, và vẫn sẽ nắm tay anh thật chặt trên chặng đường phía trước.
-		Anh yêu em rất nhiều ❤️
-		
-		
-		
-`;
+const text = `... (giữ nguyên nội dung của bạn) ...`;
 
 function typeWriter(el, text, speed=10){
   let i=0;
@@ -187,6 +172,9 @@ function typeWriter(el, text, speed=10){
       el.innerHTML += text.charAt(i);
       i++;
       setTimeout(typing,speed);
+    } else {
+      // HIỆN BUTTON SAU KHI CHẠY XONG
+      document.getElementById("viewBtn").style.display = "block";
     }
   }
   typing();
@@ -197,12 +185,17 @@ function openLetter(el){
   setTimeout(()=>{
     document.getElementById("letter").style.display="block";
     typeWriter(document.getElementById("typing"), text);
-    <!-- document.getElementById("music").play(); -->
+    document.getElementById("music").play();
   },800);
 }
+
+// CLICK BUTTON → MỞ LINK ẢNH Cần đổi lại link ảnh, đẩy lên google drive
+document.getElementById("viewBtn").onclick = function(){
+  window.open("https://link-anh-cua-ban.com", "_blank");
+};
 </script>
 
-<!-- HEART SCRIPT (giữ nguyên như trước) -->
+<!-- HEART SCRIPT -->
 <script>
 /* giữ nguyên script tim của bạn ở đây */
 </script>
